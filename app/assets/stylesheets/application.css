@@ -52,7 +52,9 @@ body {
   color: var(--clr-white);
   cursor: pointer;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  transition: box-shadow 125ms ease-in-out, translate 125ms ease-in-out,
+  transition:
+    box-shadow 125ms ease-in-out,
+    translate 125ms ease-in-out,
     background-color 125ms ease-in-out;
 }
 
