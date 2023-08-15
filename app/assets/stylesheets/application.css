@@ -13,3 +13,101 @@
  *= require_tree .
  *= require_self
  */
+html,
+body {
+  --clr-dark: #2a2a2a;
+  --clr-dark-grey: #4a4a4a;
+  --clr-light: #fbfbfb;
+  --clr-white: #fff;
+
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+  color: var(--clr-dark);
+  background-color: var(--clr-light);
+}
+
+.greeting_container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.greeting_button {
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--clr-dark);
+  border-radius: 0.25rem;
+  background-color: var(--clr-dark);
+  color: var(--clr-white);
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 125ms ease-in-out, translate 125ms ease-in-out,
+    background-color 125ms ease-in-out;
+}
+
+.greeting_button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16);
+  translate: 0 -2px;
+}
+
+.greeting_button:active {
+  background-color: var(--clr-dark-grey);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  translate: 0 0;
+}
+
+.error_message {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #dc3545;
+}
+
+/* Loader */
+svg {
+  width: 3.25em;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+}
+
+circle {
+  fill: none;
+  stroke: var(--clr-dark);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash4 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}

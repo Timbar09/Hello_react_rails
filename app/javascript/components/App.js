@@ -1,11 +1,14 @@
 import React from 'react';
-import Welcome from './Welcome';
+import { Provider } from 'react-redux';
+import store from '../store';
+
+import Greeting from './Greeting';
 
 function App() {
   return (
-    <div className="App">
-      <Welcome />
-    </div>
+    <Provider store={store}>
+      <Greeting />
+    </Provider>
   );
 }
 
