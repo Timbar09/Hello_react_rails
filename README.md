@@ -111,7 +111,9 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add more features.**
+[ ] **Multilingual Support**
+
+> Implement a feature that enables users to receive greetings in different languages.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
